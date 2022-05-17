@@ -1,0 +1,52 @@
+.radio-switch{
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-switch .heading{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    color: #333333;
+    font-family: harmonia-bold;
+}
+
+.heading .switch{
+}
+
+.switch-container{
+    display: flex;
+    justify-content: flex-end;
+    height: 55px;
+    margin-top: 20px;
+}
+
+.switch {
+    width: 33%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+    .radio-switch .heading{
+        font-size: 19px;
+    }
+
+    .switch{
+        width: 50%;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #333333;
+    }
+
+    .switch-container{
+        height: 60px;
+    }
+}
