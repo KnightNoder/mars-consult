@@ -45,6 +45,9 @@ const BasicInfo = () => {
             <ImageCard/>
             </div>  
             <div className='assessment'>
+              <div className={`${disp ? " " : ""}`}>
+                We will need your contact details to reach out for the consultation
+              </div>
               <h5>Fill in your basic information </h5>
               <h4>We're just getting to know you better</h4>
               <InputCard heading="First Name" placeholder="Eg. John" name="first_name" onchange={(e) => {Set_first_name(e.target.value); SetVibrateFirstName(false)}}
@@ -53,7 +56,7 @@ const BasicInfo = () => {
               <InputCard heading="Last Name" placeholder="Eg. Doe" value={last_name} onchange={(e) => Set_last_name(e.target.value)}
               errorText="Invalid input" vibrate={true} validity={true} />
               <br />
-              <InputCard heading="Phone Number"  placeholder="Eg. 9876543210" name="phone_number" value={phone_number} validity={phone_number.length == 10 && /^[0-9]+$/.test(phone_number)}
+              <InputCard heading="Phone Number"  placeholder="Eg. 9876543210" name="phone_number" value={phone_number} validity={phone_number.length == 10}
               onchange={(e) => {Set_phone_number(e.target.value);SetVibratePhone(false);}} errorText="Invalid input" requiredErrorText="Invalid input" 
                required="*" vibrate={vibrate_phone}/>
               <br />

@@ -58,19 +58,24 @@ const Callback = () => {
     getData();
 
     const data = getSendMailData();
-    const config = {
-        method: 'post',
-        url: `https://${process.env.REACT_APP_SEND_MAIL_API_BASE_URL}/api/device/consultation`,
-        headers: { 
-          'Content-Type': 'application/json'
-        },
-        data : data
-      };
-      axios(config).then((response) => {
-        console.log('success')
-      }).catch(function (error) {
-        console.log(error);
-      }); 
+
+    const sendMail = async () => {
+        const config = {
+            method: 'post',
+            url: `https://${process.env.REACT_APP_SEND_MAIL_API_BASE_URL}/api/device/consultation`,
+            headers: { 
+              'Content-Type': 'application/json'
+            },
+            data : data
+          };
+          axios(config).then((response) => {
+            console.log('success')
+          }).catch(function (error) {
+            console.log(error);
+          }); 
+    }
+
+    sendMail();
 
   },[])
 

@@ -53,3 +53,16 @@
     }
 }
 
+
+.show{
+    display: block;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    position: absolute;
+    height: 100%;
+    width: 100%;   
+}
+
+.hide{
+    display: none;
+}
